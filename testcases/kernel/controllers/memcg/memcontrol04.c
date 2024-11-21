@@ -207,7 +207,7 @@ static void test_memcg_low(void)
 
 		TST_EXP_EXPR(oom == 0, "(%c oom events=%ld) == 0", id, oom);
 
-		if (i < E) {
+		if (i != E) {
 			TST_EXP_EXPR(low > 0,
 				     "(%c low events=%ld) > 0", id, low);
 		} else {
